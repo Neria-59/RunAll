@@ -172,8 +172,11 @@ Figure 1 is the typical result for the number of workers vs. elapsed time. From 
 These results indicate that the number of workers is required to be under 30. For above sample script, the length of workers has to be under 30. If the number of workers is more than 30, the error is included in the returned results. Also this means that the limitation of number of simultaneous connections for Apps Script API is 30. It could be also confirmed that this result was the same to Web Apps. As the result, in the current stage, it was found that the concurrent processing using native GAS can be achieved. And when you uset this library, please set ``workers.length < 30``.
 
 
+
+
 # Future
 [It has already known that the limitation of number of requests for the fetchAll method is more than 1000.](https://gist.github.com/tanaikech/c0f383034045ab63c19604139ecb0728) So if the several servers of Apps Script API and Web Apps are used for this situation and furthermore such clients are aggregated as a system, it is considered that the concurrent processing with the high spec using native GAS can be produced. As more update of this library, I would like to try to create such system.
+
 
 
 # Appendix
